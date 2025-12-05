@@ -1,0 +1,79 @@
+logic:
+
+user inputs term date of policy [planOfAttack = currentDate.Value - txtTermDate.Value]
+	-> show if within 2 months (reactivation), 3 months (reactivation w authorization), 6 months (dental), 1 year (ancillary), 2 years (vision)
+
+if within 2 months
+	-> show reactivation process
+		- ask if they want to use their bank/card on file
+			- if new bank/card info, update
+				if bank
+ 					- ask for routing number
+ 					- acc number
+ 					- acc holder
+ 				if cc
+ 					- bill id (found in facets)
+ 					- acc holder
+
+	-> ask authorization to charge the account on file
+	-> tell disclaimer: payment will be processed within 3-5 BD.
+	-> show CSI for ACET use
+		BANK ACCOUNT (CSI for UPDATING BANK INFO)
+			Sub ci to reactivate his pol
+			Rep asked if they will auth to charge the acc on file ; they have a new bank acc.
+			Adv payment will be processed within 3-5 BD.
+			ROUTING NUMBER: {RoutingNo}
+			ACC NUMBER: {AccNo} 
+			ACC HOLDER: {AccName}
+			ACTION:
+			PLEASE UPDATE THE PAYMENT INFO AND REACTIVATE THE POL
+			THEY AUTH TO CHARGE THE BANK ACC FOR THE {PastDues} MONTHS DUE
+		
+		CARD ON FILE (CSI for UPDATING CC INFO)
+			Sub ci to reactivate his pol
+			Rep asked if they will auth to charge the acc on file ; they have a new card.
+			Adv payment will be processed within 3-5 BD
+			BILL ID: {BillID} (found in facets)
+			ACC HOLDER: {AccName}
+			ACTION:
+			PLEASE UPDATE THE PAYMENT INFO AND REACTIVATE THE POL
+			THEY AUTH TO CHARGE THE BANK ACC FOR THE {PastDues} MONTHS DUE
+
+		BANK/CARD ON FILE
+			Sub ci to reactivate his pol
+			Rep asked if he will auth to charge the acc on file.
+			Adv payment will be processed within 3-5 BD
+			ACTION:
+			PLEASE REACTIVATE THE POL
+			THEY AUTH TO CHARGE THE BANK ACC FOR THE {PastDues} MONTHS DUE
+
+
+	-> topic card: View Member Eligibility > Route to CS
+
+if within 3 months
+	-> do same process above but ask for authorization from SUPPORT/TL/SSA
+
+if within 6 months (dental)
+	-> show reinstatement process
+ 		- ask authorization to charge the account on file
+ 		- verify bank/card details
+ 		if bank
+ 			- ask for routing number
+ 			- acc number
+ 			- acc holder
+ 		if cc
+ 			- bill id (found in facets)
+ 			- acc holder
+ 	-> tell disclaimer: payment will be processed within 3-5 BD.
+ 	-> show CSI for ACET use
+ 	-> topic card: View Member Eligibility > Route to CS
+
+if within 1 year (ancillary)
+	-> show reinstatement process
+		- send form
+	Topic Member Other Inquiry > Correspondence > Subscriber/Member > Send Correspondence or Form > CSI > Route to CS
+	Sub ci to reins the pol
+	Rep adv we could reins the pol w/ lapse in coverage and they will just pay a prorated amount for DEC prem
+	Sub- agreed to just reinstate the policy 
+	Rep adv to give a form for them to fill out and mail or fax to our PO.
+	Rep- provided the old member ID and informed that it will be reinstated within 3-5 BD. Confirmation letter will be mailed within 7-10 BD.

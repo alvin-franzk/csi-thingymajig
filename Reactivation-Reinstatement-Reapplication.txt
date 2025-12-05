@@ -1,0 +1,18 @@
+Start: Policy Terminated?
+        |
+        ├── Termination within 2–3 months
+        |       └── Advise: Reactivate
+        |            - Pay missed premiums
+        |            - Claims during lapse may be resubmitted
+        |
+        ├── Termination beyond 3 months but within reinstatement window
+        |       └── Advise: Reinstate
+        |            - Pay overdue premiums (+ interest/penalties)
+        |            - May require medical proof of insurability
+        |            - Coverage resumes prospectively (no claims during lapse)
+        |
+        └── Termination beyond ~12 months (varies by product)
+                └── Advise: Reapply
+                     - Full new application
+                     - Underwriting required
+                     - New terms/premiums may apply
