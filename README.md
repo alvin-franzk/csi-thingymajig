@@ -3,18 +3,16 @@ CSI thingymajig for CSRs.
 
 ## Overview
 - Purpose
-	- The main purpose of this program is to assist those who have trouble organizing their thoughts and help create a flow that keeps the call in an enclosed environment, and in the end, create a CSI note.
+	- The main purpose of this program is to assist agents who have trouble writing their CSI notes.
 - Workflow summary
 	1. Agent opens the program alongside other CSR tools.
 	2. Agent does their usual call flow/greeting.
 	3. Agent inputs the necessary information needed in the fields for the task/concern to be resolved.
 	4. Premade scripts are given and the process of resolving the concern is shown.
-	5. Agent follows steps given from program.
 	6. Once task is resolved, a CSI is given for the Agent to copy and paste in their CSI tool.
-	7. The program resets the fields for the next caller.
 
 ---
-## VBA Form Design
+## ~~VBA Form Design~~ (REWRITING NEEDED; IGNORE FOLLOWING)
 - Controls used
 	- **Main Form**
 		- Text boxes
@@ -48,14 +46,17 @@ CSI thingymajig for CSRs.
 - Table of concerns + scripts
 	- Adding Dependent
 	- Appeals & Grievances
-	- Cancellation
-	- Reactivation
-	- Reapplication
+	- Cancellation ✅
+ 	- Draft Date Change/Delay 
+	- Reactivation ✅
+	- Reapplication ✅
 	- Removing Dependent
-	- Reinstatement
+	- Reinstatement ✅
 	- Request VOC
-	- Termination
-	- Withdrawal
+ 	- Request ID Cards
+	- Withdrawal ✅
+ 	- Processing Payment ✅ NEW!
+  	- Refund Calculator ✅ NEW! 
 - Placeholder logic
 
 ---
@@ -65,9 +66,11 @@ CSI thingymajig for CSRs.
 
 ---
 ## Future Ideas
-- Save call logs
-- Add retention offers
 - Migrate to Python or Power Apps
+- Minimize Spreadsheet and leave User Form on Top
+- How to resolve Refund concerns
+- Show appropriate Topic Cards for CSI
+- Requesting ID Cards concern
 
 
 
